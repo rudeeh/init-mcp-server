@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Based on the screenshot provided, here is the **complete text** visible on screen. \n\n**Note:** This screenshot shows a **configuration UI dialog** (for setting up a custom connected app in Google Gemini), **not a terminal build log or deploy log**. There is no terminal output, command-line text, or build process logs visible in this image. The only status/error message is the validation error shown below.\n\n---\n\n### Complete Text from Screenshot\n\n**Header:**\n```\nSet up a custom connected app\n```\n\n**Form Fields & Labels:**\n```\nAdd a custom app link\n\nhttps://my-mcp-server-8l8g.onrender.com/sse\n\nThe MCP server could not be reached. Check the URL.\n\nAdvanced settings\n\nClient ID\nOAuth client ID\n\nClient secret\nOAuth client secret\n```\n\n**Actions:**\n```\nCopy redirect URI\n```\n\n**Informational Text:**\n```\nAbout custom connected apps\n\nBy adding this link, you're allowing Gemini to send info to a custom \nconnected app that hasn't been reviewed by Google. Make sure that you \ntrust this service before connecting. Learn more about connecting custom \napps\n```\n\n**Buttons:**\n```\nCancel    Next\n```\n\n---\n\n### Status/Error Message (The only \"log-like\" output):\n```\nThe MCP server could not be reached. Check the URL.\n```\n\n**Context:** This red error message indicates that the MCP (Model Context Protocol) server endpoint at `https://my-mcp-server-8l8g.onrender.com/sse` is either not running, not responding, or returning an error when Gemini attempts to connect to it via Server-Sent Events (SSE).\n\nIf you are looking for the actual **Render deploy/build logs** for this service, you would need to navigate to your Render dashboard → select the `my-mcp-server-8l8g` service → click the **\"Logs\"** tab (not this Gemini configuration screen).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1787597548,
+  "id": "202608250252254389588f19ba46ca",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202608250252254389588f19ba46ca",
+  "usage": {
+    "completion_tokens": 407,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 815,
+    "prompt_tokens_details": {
+      "cached_tokens": 3
+    },
+    "total_tokens": 1222
+  }
+}
