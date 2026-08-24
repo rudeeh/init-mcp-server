@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Based on the screenshot provided, here is a detailed description of the interface:\n\n**Current Status:**\nThe status is **Failed** (or **Unreachable**). There is a prominent error message in red text that reads: **\"The MCP server could not be reached. Check the URL.\"**\n\n**Text on Screen:**\n*   **Top:** \"Add a custom app link\"\n*   **URL Field:** `https://my-mcp-server-8i8g.onrender.com/sse`\n*   **Error Message:** \"The MCP server could not be reached. Check the URL.\"\n*   **Section Header:** \"Advanced settings\" (with an upward-pointing chevron indicating it is expanded)\n*   **Input Label:** \"Client ID\"\n*   **Placeholder Text:** \"OAuth client ID\"\n*   **Input Label:** \"Client secret\"\n*   **Placeholder Text:** \"OAuth client secret\"\n*   **Button/Link:** \"Copy redirect URI\" (with a copy icon)\n*   **Info Header:** \"About custom connected apps\"\n*   **Warning Text:** \"By adding this link, you're allowing Gemini to send info to a custom connected app that hasn't been reviewed by Google. Make sure that you trust this service before connecting.Learn more about connecting custom apps\"\n\n**Visible Buttons:**\nThere are two buttons located at the bottom right of the screen:\n1.  **Cancel**\n2.  **Next**\n\n**Summary:**\nThis is a configuration screen for adding a custom connected app (specifically an MCP server) to Google Gemini. The user has entered a Render URL (`https://my-mcp-server-8i8g.onrender.com/sse`), but the system is reporting that it cannot reach the server at that address. It is **not** showing as Live or Building; it is showing a connection failure state.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1787596861,
+  "id": "20260825024055c7f6a5a69893476b",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20260825024055c7f6a5a69893476b",
+  "usage": {
+    "completion_tokens": 382,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 717,
+    "prompt_tokens_details": {
+      "cached_tokens": 3
+    },
+    "total_tokens": 1099
+  }
+}
