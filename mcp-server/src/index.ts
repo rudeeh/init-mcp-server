@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import { SSEServerTransport } from '@modelcontextprotocol/sdk/server/sse.js';
 import { registerTools } from './tools.js';
@@ -15,7 +15,7 @@ registerTools(server);
 
 const transports = new Map<string, SSEServerTransport>();
 
-app.get('/sse', async (req, res) => {
+app.get('/sse', async (req: Request, res: Response) => {
   const transport = new SSEServerTransport('/message', res);
   const clientId = crypto.randomUUID();
   transports.set(clientId, transport);
@@ -26,7 +26,7 @@ app.get('/sse', async (req, res) => {
   console.log(`[SSE] Client ${clientId} connected`);
 });
 
-app.post('/message', async (req, res) => {
+app.post('/message', async (req: Request, res: Response) => {
   const transport = Array.from(transports.values()).pop();
   if (!transport) {
     res.status(400).json({ error: 'No active SSE connection' });
@@ -35,7 +35,7 @@ app.post('/message', async (req, res) => {
   await transport.handlePostMessage(req, res);
 });
 
-app.get('/health', (_req, res) => {
+app.get('/health', (_req: Request, res: Response) => {
   res.json({ status: 'ok', clients: transports.size });
 });
 
