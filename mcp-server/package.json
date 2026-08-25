@@ -3,20 +3,13 @@
   "version": "1.0.0",
   "description": "A Model Context Protocol (MCP) server with SSE transport for cloud deployment",
   "type": "module",
-  "main": "dist/index.js",
+  "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "tsx src/index.ts"
+    "start": "node index.js",
+    "dev": "node --watch index.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.1",
-    "@types/express": "^5.0.1",
-    "@types/node": "^22.13.10",
-    "express": "^4.21.2",
-    "typescript": "^5.8.2"
-  },
-  "devDependencies": {
-    "tsx": "^4.19.3"
+    "express": "^4.21.2"
   }
 }
