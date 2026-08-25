@@ -3,5 +3,6 @@ services:
     name: my-mcp-server
     runtime: node
     plan: free
+    rootDir: .
     buildCommand: npm install
     startCommand: npm start
